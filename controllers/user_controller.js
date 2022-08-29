@@ -29,24 +29,6 @@ router.get("/:productIndex", async (req, res) => {
   }
   });
 
-
-
-  router.get("/:productIndex", async (req, res) => {
-
-
-    try{
-  
-      const foundRoom = await db.Room.findById(req.params.productIndex)
-      // let product = products[req.params.productIndex];
-      res.render("show.ejs", { product: foundRoom, id: foundRoom._id });
-  
-  }catch(err){
-      // throw new Error(err)
-      console.log(err)
-      res.redirect('/404')
-  }
-  });
-
   
   
   // index - http://localhost:XXXX/products
@@ -68,22 +50,6 @@ router.get("/:productIndex", async (req, res) => {
   });
   
 
-
-  router.get("/", async (req, res) => {
-  
-    try{
-  
-      const allRooms = await db.Room.find()
-      const context = { rooms: allRooms };
-      console.log(allRooms)
-      res.render("index.ejs", context);
-  
-  } catch(err){
-      // throw new Error(err)
-      console.log(err)
-      res.redirect('/404')
-  }  
-  });
   
 
   module.exports = router;
