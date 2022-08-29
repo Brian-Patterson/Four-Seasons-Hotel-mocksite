@@ -8,7 +8,7 @@ const productsController = require('./controllers/products_controller')
 
 // app configuration
 const app = express()
-const PORT = 5000
+const PORT = 4000
 app.set('view engine', 'ejs')
 
 
@@ -18,10 +18,12 @@ app.use(methodOverride('_method'));
 
 // MIDDLEWARE - code that runs for every request (before routes)
 // Router - Products
-app.use('/products', productsController)
+// app.use('/products', productsController)
 
-
-
+//  home route
+app.get('/', (req, res) => {
+    res.render(`home.ejs`)
+})
 
 // SERVER
-app.listen(4000, () => console.log('starting server at port:', PORT))
+app.listen(PORT, () => console.log('starting server at port:', PORT))
