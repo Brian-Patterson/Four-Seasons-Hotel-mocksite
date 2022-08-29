@@ -15,10 +15,11 @@ body {
     grid-template-columns: repeat(7, fr);
     grid-template-rows: repeat(auto-fill, fr);
     background-color: aquamarine;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-name: background;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-delay: 6s;
 }
 
 @keyframes background {
@@ -27,12 +28,6 @@ body {
     }
     to {
         background-color: blueviolet;
-    }
-    from {
-        background-color: blueviolet;
-    }
-    to {
-        background-color: aquamarine;
     }
 }
 
@@ -60,7 +55,16 @@ body {
     display: grid;
     grid-template-columns: repeat(3, fr);
     gap: 20px;
-    border: 1px solid black
+    border: 1px solid black;
+    transition: 0.5s linear;
+}
+
+.page{
+    transition: 0.25s linear;
+}
+
+.page:hover {
+    border: 5px solid black;
 }
 
 .show1 {
