@@ -50,3 +50,7 @@ router.get("/:productIndex", async (req, res) => {
 
 
   module.exports = router;
+
+// // MODEL IMPORT
+// const db = require("../models");
+

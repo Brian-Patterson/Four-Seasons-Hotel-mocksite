@@ -1,3 +1,4 @@
+//push rooms to db using dbTest.js
 const rooms = [
     {
         roomNumber: 101,
