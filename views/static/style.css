@@ -15,8 +15,12 @@ body {
 }
 
 .showCase {
-    grid-column: 3;
-    grid-row: 3;
+    grid-column: 2/span 4;
+    grid-row: 3/ span 2;
+}
+
+.show {
+    display: inline;
 }
 
 .foot {
