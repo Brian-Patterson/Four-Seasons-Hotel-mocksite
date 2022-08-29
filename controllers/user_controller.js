@@ -40,7 +40,7 @@ router.get("/:productIndex", async (req, res) => {
       const allUsers = await db.User.find()
       const context = { users: allUsers };
       console.log(allUsers)
-      res.render("index.ejs", context);
+      res.render("accounts.ejs", context);
   
   } catch(err){
       // throw new Error(err)
