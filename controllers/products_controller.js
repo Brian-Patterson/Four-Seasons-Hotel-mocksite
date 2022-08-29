@@ -18,7 +18,7 @@ router.get("/:productIndex", async (req, res) => {
 
     try{
   
-      const foundProduct = await db.Products.findById(req.params.productIndex)
+      const foundProduct = await db.User.findById(req.params.productIndex)
       // let product = products[req.params.productIndex];
       res.render("show.ejs", { product: foundProduct, id: foundProduct._id });
   
@@ -49,5 +49,5 @@ router.get("/:productIndex", async (req, res) => {
 
 
 
-  
+
   module.exports = router;
