@@ -3,8 +3,8 @@ const express = require('express') // commonJS import statement
 const methodOverride = require('method-override');
 
 // CONTROLLER IMPORTS
-const productsController = require('./controllers/products_controller')
-
+const userController = require('./controllers/user_controller')
+const roomController = require('./controllers/room_controller')
 
 // app configuration
 const app = express()
@@ -22,7 +22,8 @@ app.use(methodOverride('_method'));
 
 // MIDDLEWARE - code that runs for every request (before routes)
 // Router - Products
-app.use('/products', productsController)
+app.use('/users', userController)
+app.use('/rooms', roomController)
 
 //  home route
 app.get('/', (req, res) => {
