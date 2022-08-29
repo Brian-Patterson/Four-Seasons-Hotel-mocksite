@@ -11,6 +11,23 @@ router.use(express.json());
 const db = require("../models");
 
 
+router.get("/", async (req, res) => {
+  
+    try{
+  
+      const allRooms = await db.Room.find()
+      const context = { rooms: allRooms };
+      console.log(allRooms)
+      res.render("index.ejs", context);
+  
+  } catch(err){
+      // throw new Error(err)
+      console.log(err)
+      res.redirect('/404')
+  }  
+  });
+
+
 
 // show route - http://localhost:XXXX/products/0
 // GET request for one product template
@@ -33,21 +50,6 @@ router.get("/:productIndex", async (req, res) => {
    // index - http://localhost:XXXX/products
   // POST request for all products from products DB
 
-  router.get("/", async (req, res) => {
-  
-    try{
-  
-      const allRooms = await db.Room.find()
-      const context = { rooms: allRooms };
-      console.log(allRooms)
-      res.render("index.ejs", context);
-  
-  } catch(err){
-      // throw new Error(err)
-      console.log(err)
-      res.redirect('/404')
-  }  
-  });
 
 
 

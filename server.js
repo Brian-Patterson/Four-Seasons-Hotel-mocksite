@@ -9,13 +9,12 @@ const roomController = require('./controllers/room_controller')
 // app configuration
 const app = express()
 const PORT = 4000
-app.set('view engine', 'ejs')
 
 
 // MIDDLEWARE
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
-
+require("./config/db.connection");
 // MIDDLEWARE - code that runs for every request (before routes)
 // Router - Products
 // app.use('/products', productsController)
@@ -25,6 +24,7 @@ app.use(methodOverride('_method'));
 app.use('/users', userController)
 app.use('/rooms', roomController)
 
+app.set('view engine', 'ejs')
 //  home route
 app.get('/', (req, res) => {
     res.render(`home.ejs`)
