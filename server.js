@@ -20,6 +20,10 @@ app.use(methodOverride('_method'));
 // Router - Products
 // app.use('/products', productsController)
 
+// MIDDLEWARE - code that runs for every request (before routes)
+// Router - Products
+app.use('/products', productsController)
+
 //  home route
 app.get('/', (req, res) => {
     res.render(`home.ejs`)
