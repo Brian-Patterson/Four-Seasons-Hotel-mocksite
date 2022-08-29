@@ -1,0 +1,27 @@
+{
+  "name": "project-2-4-seasons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brian-Patterson/project-2-4-seasons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brian-Patterson/project-2-4-seasons/issues"
+  },
+  "homepage": "https://github.com/Brian-Patterson/project-2-4-seasons#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
