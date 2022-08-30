@@ -33,14 +33,14 @@ router.get("/:productIndex", async (req, res) => {
 
   // create route - http://localhost:XXXX/products/
 // POST request for adding new product to products DB
-router.post("/", async (req, res) => {
-  const userProduct = req.body;
+router.post("/accounts", async (req, res) => {
+  const userAccount = req.body;
   try {
-    const newUserProduct = await db.User.create(userProduct);
+    const newUserAccount = await db.User.create(userAccount);
 
-    console.log(newUserProduct, "this is the artist");
+    console.log(newUserAccount, "this is the userAccount");
 
-    res.redirect("/artists");
+    res.redirect("/accounts");
 
   } catch (err) {
     console.log(err)
