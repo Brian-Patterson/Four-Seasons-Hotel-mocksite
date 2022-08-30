@@ -26,10 +26,11 @@ router.get("/:objectId", async (req, res) => {
   }  
   });
 
-  router.get("/:hotelId/roomId", async (req, res)=> {
+  router.get("/:hotelId/:roomId", async (req, res)=> {
     try{
         const room = await db.Room.findById(req.params.roomId)
-        const context = {room: room }
+        const hotel = await db.Hotel.findById(req.params.hotelId)
+        const context = {room: room, hotel: hotel }
         res.render("show.ejs", context)
     } catch(err){
         console.log(err)
@@ -39,65 +40,22 @@ router.get("/:objectId", async (req, res) => {
 
 
 
-// show route - http://localhost:XXXX/products/0
-// GET request for one product template
-// router.get("/:objectId", async (req, res) => {
-
-
-//     try{
-  
-//       const foundRoom = await db.Room.findById(req.params.objectId)
-//       // let product = products[req.params.productIndex];
-//       res.render("show.ejs", { room: foundRoom, id: foundRoom._id });
-  
-//   }catch(err){
-//       // throw new Error(err)
-//       console.log(err)
-//       res.redirect('/404')
-//   }
-//   });
-
-   // index - http://localhost:XXXX/products
-  // POST request for all products from products DB
-
-// edit route -  http://localhost:XXXX/products/<productId>/edit
-// GET request for product edit template
-router.get("/:productId/home", async (req, res) => {
-    // const foundProduct = products[req.params.productId];
-    // const context = { product: foundProduct, id: req.params.productId };
-    // res.render("edit.ejs", context);
-  
+  router.get("/:hotelId/:roomId/edit", async (req, res)=> {
     try{
-  
-      const foundRoom = await db.Room.findById(req.params.productId)
-      console.log(foundRoom)
-      // let product = products[req.params.productIndex];
-      res.render("edit.ejs", { product: foundRoom, id: foundRoom._id });
-  
-  }catch(err){
-  
-      // throw new Error(err)
-      console.log(err)
-      res.redirect('/404')
-  }
+        const room = await db.Room.findById(req.params.roomId)
+        const context = {room: room }
+        res.render("roomEdit.ejs")
+    } catch(err){
+        console.log(err)
+        res.redirect('/404')
+    }
   });
 
 
-// destroy - http://localhost:XXXX/products/<productId>
-// DELETE request for removing one product from products DB
-// router.delete("/:productId", async (req, res) => {
-//     try{
+
   
-//       const foundRoom = await db.Room.findByIdAndDelete(req.params.productId)
-//       console.log(foundRoom)
-//       return res.redirect("/accounts");
-  
-//   }catch(err){
-//       // throw new Error(err)
-//       console.log(err)
-//       res.redirect('/404')
-//   }
-//   });
+
+
 
 
   module.exports = router;
