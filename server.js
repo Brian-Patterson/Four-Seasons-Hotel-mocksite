@@ -25,9 +25,19 @@ app.use('/users', userController)
 app.use('/rooms', roomController)
 
 app.set('view engine', 'ejs')
+
+const db = require("../models");
 //  home route
-app.get('/', (req, res) => {
-    res.render(`home.ejs`)
+app.get('/', async (req, res) => {
+    try {
+    const hotels = await db.Hotel.find();
+    const context = {hotels: hotels}
+    res.render(`home.ejs`, context)
+} catch (err) {
+    console.log(err)
+    res.redirect('/404')
+    // throw new Error(err);
+  }
 })
 
 // SERVER
