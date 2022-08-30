@@ -26,6 +26,17 @@ router.get("/:objectId", async (req, res) => {
   }  
   });
 
+  router.get("/:hotelId/roomId", async (req, res)=> {
+    try{
+        const room = await db.Room.findById(req.params.roomId)
+        const context = {room: room }
+        res.render("show.ejs", context)
+    } catch(err){
+        console.log(err)
+        res.redirect('/404')
+    }
+  });
+
 
 
 // show route - http://localhost:XXXX/products/0
