@@ -60,10 +60,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    border: 1px solid black;
     transition: 0.5s linear;
     margin: 5px;
-    padding: 40px;
 }
 
 .page{
@@ -78,7 +76,7 @@ body {
     grid-column: 1; 
     border: 1px solid black;
     background-image: url(https://images.stockfreeimages.com/3658/sfixl/36582790.jpg);
-    justify-self: stretch;
+    height: 200px;
 }
 
 .show2 {
@@ -94,11 +92,13 @@ body {
 }
 
 .about {
-    border: 1px solid black;
     margin: 5px;
     padding: 5px;
-    grid-column: 2/span 4;
+    grid-column: 1/span 7;
     grid-row: 8;
+    height: 250px;
+    background-color: rgb(210, 210, 214);
+    text-align: center;
 }
 
 .deals {
