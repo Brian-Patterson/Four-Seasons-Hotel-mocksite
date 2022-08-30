@@ -43,13 +43,33 @@ router.get("/:objectId", async (req, res) => {
   router.get("/:hotelId/:roomId/edit", async (req, res)=> {
     try{
         const room = await db.Room.findById(req.params.roomId)
-        const context = {room: room }
-        res.render("roomEdit.ejs")
+        const hotel = await db.Hotel.findById(req.params.hotelId)
+        const context = {room: room, hotel: hotel }
+        res.render("roomEdit.ejs", context)
     } catch(err){
         console.log(err)
         res.redirect('/404')
     }
   });
+
+
+  router.put("/:hotelId/:roomId", async (req, res) => {
+
+    try{
+      const updatedRoomData = req.body;
+      await db.Room.findByIdAndUpdate(req.params.roomId, updatedRoomData, {new:true})
+      
+      res.redirect(`/rooms/${req.params.hotelId}`);
+    }catch(err){
+      console.log(err)
+      res.redirect('/404')
+    }
+  
+    
+  });
+
+
+//   Put route
 
 
 
