@@ -29,11 +29,31 @@ router.get("/:productIndex", async (req, res) => {
   }
   });
 
+
+
+  // create route - http://localhost:XXXX/products/
+// POST request for adding new product to products DB
+router.post("/accounts", async (req, res) => {
+  const userAccount = req.body;
+  try {
+    const newUserAccount = await db.User.create(userAccount);
+
+    console.log(newUserAccount, "this is the userAccount");
+
+    res.redirect("/accounts");
+
+  } catch (err) {
+    console.log(err)
+    res.redirect('/404')
+    // throw new Error(err);
+  }
+});
+
   
   
   // index - http://localhost:XXXX/products
   // POST request for all products from products DB
-  router.get("/", async (req, res) => {
+  router.get("/accounts", async (req, res) => {
   
     try{
   
@@ -51,4 +71,3 @@ router.get("/:productIndex", async (req, res) => {
   
 
   module.exports = router;
-
