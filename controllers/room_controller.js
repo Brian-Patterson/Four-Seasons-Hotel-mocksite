@@ -11,6 +11,9 @@ router.use(express.json());
 const db = require("../models");
 
 
+<<<<<<< HEAD
+router.get("/:objectId", async (req, res) => {
+=======
 // new route - http://localhost:XXXX/products/new
 // GET request for new products template
 router.get("/new", (req, res) => {
@@ -20,11 +23,12 @@ router.get("/new", (req, res) => {
 
 router.get("/", async (req, res) => {
   
+>>>>>>> 774c95587a0f858805194fcf2ff9fdc3c2f34c1a
     try{
-  
-      const allRooms = await db.Room.find()
-      const context = { rooms: allRooms };
-      console.log(allRooms)
+      const hotel = await db.Hotel.findById(req.params.objectId);
+      const allRooms = await db.Room.find({hotel:req.params.objectId})
+      const context = { hotel: hotel, allRooms: allRooms } ;
+      console.log(hotel);
       res.render("index.ejs", context);
   
   } catch(err){
@@ -38,21 +42,21 @@ router.get("/", async (req, res) => {
 
 // show route - http://localhost:XXXX/products/0
 // GET request for one product template
-router.get("/:productIndex", async (req, res) => {
+// router.get("/:objectId", async (req, res) => {
 
 
-    try{
+//     try{
   
-      const foundRoom = await db.Room.findById(req.params.productIndex)
-      // let product = products[req.params.productIndex];
-      res.render("show.ejs", { product: foundRoom, id: foundRoom._id });
+//       const foundRoom = await db.Room.findById(req.params.objectId)
+//       // let product = products[req.params.productIndex];
+//       res.render("show.ejs", { room: foundRoom, id: foundRoom._id });
   
-  }catch(err){
-      // throw new Error(err)
-      console.log(err)
-      res.redirect('/404')
-  }
-  });
+//   }catch(err){
+//       // throw new Error(err)
+//       console.log(err)
+//       res.redirect('/404')
+//   }
+//   });
 
    // index - http://localhost:XXXX/products
   // POST request for all products from products DB
