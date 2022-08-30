@@ -8,6 +8,9 @@ const rooms = [
         bedCount: 3,
         available: true,
         hotel: "630e17247cdb23e3b56678f6",
+        user: "",
+        userArrival: "",
+        userDeparture: "",
     },
     {
         roomNumber: 102,
@@ -15,6 +18,9 @@ const rooms = [
         bedCount: 4,
         available: true,
         hotel: "630e17247cdb23e3b56678f7",
+        user: "",
+        userArrival: "",
+        userDeparture: "",
     },
     {
         roomNumber: 103,
@@ -22,6 +28,9 @@ const rooms = [
         bedCount: 5,
         available: true,
         hotel: "630e17247cdb23e3b56678f8",
+        user: "",
+        userArrival: "",
+        userDeparture: "",
     },
 ];
 

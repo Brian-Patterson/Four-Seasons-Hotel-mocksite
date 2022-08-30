@@ -5,8 +5,10 @@ const roomSchema = new mongoose.Schema({
     price: { type: Number, min: [0, 'you cannot add negative price values'], required: [true, "price cannot be empty"]},
     bedCount: {type: Number},
     available: {type: Boolean, default: true},
-    user: {type: String},
+    user: {type: String, required: [true, "empty string"]},
     hotel: {type: mongoose.Types.ObjectId, ref: "Hotel"},
+    userArrival: {type: String, required: [true, "empty string"]},
+    userDeparture: {type: String, required: [true, "empty string"]},
 }, {timestamps: true,
 })
 
