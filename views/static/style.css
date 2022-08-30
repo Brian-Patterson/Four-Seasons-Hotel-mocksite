@@ -95,10 +95,19 @@ body {
     grid-row: 6;
 }
 
+.dealt{
+    transition: 0.25s linear;
+}
+
+.dealt:hover {
+    border: 5px solid black;
+}
+
 .deal1{
     border: 1px solid black;
     grid-column: 1;
 }
+
 
 .deal2 {
     border: 1px solid black;
