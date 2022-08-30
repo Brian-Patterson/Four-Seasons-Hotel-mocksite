@@ -11,19 +11,7 @@ router.use(express.json());
 const db = require("../models");
 
 
-<<<<<<< HEAD
 router.get("/:objectId", async (req, res) => {
-=======
-// new route - http://localhost:XXXX/products/new
-// GET request for new products template
-router.get("/new", (req, res) => {
-    res.render("new.ejs");
-  });
-
-
-router.get("/", async (req, res) => {
-  
->>>>>>> 774c95587a0f858805194fcf2ff9fdc3c2f34c1a
     try{
       const hotel = await db.Hotel.findById(req.params.objectId);
       const allRooms = await db.Room.find({hotel:req.params.objectId})
