@@ -26,7 +26,7 @@ app.use('/rooms', roomController)
 
 app.set('view engine', 'ejs')
 
-const db = require("../models");
+const db = require("./models");
 //  home route
 app.get('/', async (req, res) => {
     try {
