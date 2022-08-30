@@ -17,10 +17,15 @@
     <div class="showCase">
         <h1 class="randShow">rando show page</h1>
             <div class="showpages">
-                <h2 class="show1 page">show page one</h2>
+                <h2 class="show1 page"> <a href="/rooms/<%= hotels[0]._id %>">show page one</a></h2>
                 <h2 class="show2 page">show page two</h2>
                 <h2 class="show3 page">show page three</h2>
             </div>
+
+
+
+
+
     </div>
     <div class="about">
         <h3>About Hotel California</h3>
@@ -61,3 +66,11 @@
     </footer>
 </body>
 </html>
+
+<script>
+    let showpages = document.getElementsByClassName("page") 
+    console.log(showpages)
+    for (let i=0; i<showpages.length; i++) {
+        showpages[0].addEventListener
+    }
+</script>
