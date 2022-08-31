@@ -16,31 +16,47 @@ let arr = [balcony, kitchen, bath];
 next.addEventListener("click", () => {
     console.log(i)
     arr[i].classList.remove("center");
-    arr[i].classList.add("right");
+    arr[i].classList.add("left");
     i++;
     if(i === arr.length){
         i = 0;
-        arr[arr.length-1].classList.remove("center");
-        arr[arr.length-1].classList.add("left");
-        arr[i].classList.add("center")
-    } else {
+        arr[i].classList.remove("right");
         arr[i].classList.add("center");
+        arr[i+1].classList.remove("left");
         arr[i+1].classList.add("right");
+    } else {
+        arr[i].classList.remove("right");
+        arr[i].classList.add("center");
+        if (i === arr.length-1){
+            arr[0].classList.remove("left");
+            arr[0].classList.add("right");
+        } else {
+            arr[i+1].classList.remove("left");
+            arr[i+1].classList.add("right");
+        }
     }
 })
 
 last.addEventListener("click", () => {
     console.log(i);
     arr[i].classList.remove("center");
-    arr[i].classList.add("left");
+    arr[i].classList.add("right");
     i--;
     if(i === -1){
         i = arr.length-1;
-        arr[0].classList.remove("center");
-        arr[0].classList.add("left");
-        arr[i].classList.add("center")
-    } else {
+        arr[i].classList.remove("left");
         arr[i].classList.add("center");
-        arr[arr.length-1].classList.add("left")
+        arr[i-1].classList.remove("right");
+        arr[i-1].classList.add("left");
+    } else {
+        arr[i].classList.remove("left");
+        arr[i].classList.add("center");
+        if(i === 0){
+            arr[arr.length-1].classList.remove("right");
+            arr[arr.length-1].classList.add("left");
+        } else {
+            arr[i-1].classList.remove("right");
+            arr[i-1].classList.add("left");
+        }
     }
 })
