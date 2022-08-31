@@ -80,21 +80,21 @@ router.post("/", async (req, res) => {
   });
   
 
-//   // destroy - http://localhost:XXXX/products/<productId>
-// // DELETE request for removing one product from products DB
-// router.delete("/:accountId", async (req, res) => {
-//   try{
+  // destroy - http://localhost:XXXX/products/<productId>
+// DELETE request for removing one product from products DB
+router.delete("/accounts/:userId", async (req, res) => {
+  try{
 
-//     const foundUser = await db.User.findByIdAndDelete(req.params.productIndex)
-//     console.log(foundUser)
-//     return res.redirect(“/accounts”);
+    const foundUser = await db.User.findByIdAndDelete(req.params.userId)
+    console.log(foundUser)
+    return res.redirect("/accounts");
 
-// }catch(err){
-//     // throw new Error(err)
-//     console.log(err)
-//     res.redirect('/404')
-// }
-// });
+  }catch(err){
+    // throw new Error(err)
+    console.log(err)
+    res.redirect('/404')
+}
+});
 
 
 
