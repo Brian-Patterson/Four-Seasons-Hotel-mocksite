@@ -15,6 +15,8 @@ const PORT = 4000
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 require("./config/db.connection");
+app.use(express.urlencoded({ extended: false }));
+
 // MIDDLEWARE - code that runs for every request (before routes)
 // Router - Products
 // app.use('/products', productsController)

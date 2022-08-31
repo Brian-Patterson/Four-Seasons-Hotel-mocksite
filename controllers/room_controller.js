@@ -58,14 +58,14 @@ router.get("/:objectId", async (req, res) => {
     try{
       const updatedRoomData = req.body;
     // const updatedUser = req.body.user;
-      await db.Room.findByIdAndUpdate(req.params.roomId, updatedRoomData)
+      await db.Room.findByIdAndUpdate(req.params.roomId, updatedRoomData, {new:true})
       res.redirect(`/rooms/${req.params.hotelId}`);
       console.log("ROOM", req.body)
     }catch(err){
       console.log(err)
       res.redirect('/404')
     }
-  
+
     
   });
 

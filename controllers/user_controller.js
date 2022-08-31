@@ -5,7 +5,6 @@ const router = express.Router();
 
 // MIDDLEWARE
 router.use(express.json());
-router.use(express.urlencoded({ extended: false }));
 
 // MODEL IMPORT
 const db = require("../models");
