@@ -1,11 +1,12 @@
 body {
-    background-color: #fcfbfc;
+    background-color: #212020;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
     margin: auto;
     width: 100vw;
     height: 100vh;
+    color: whitesmoke;
 }
 
 .header {
@@ -39,9 +40,10 @@ body {
 }
 
 .nav2 {
-    grid-column: 2;
+    grid-column: 2/span 4;
     grid-row: 5;
     align-self: end;
+    display: inline;
 }
 
 .search {
@@ -76,7 +78,7 @@ body {
 }
 
 .page:hover {
-    border: 5px solid black;
+    border: 5px solid whitesmoke;
 }
 
 .show1 {
@@ -144,11 +146,15 @@ body {
     text-align: center;
 }
 
+.hotelAbout {
+    color: whitesmoke;
+}
 .thisHotel {
     background-color: rgb(210, 210, 214);
     text-align: center;
     padding: 80px;
     font-size: 20px;
+    color: black;
 }
 
 .deals {
@@ -163,7 +169,7 @@ body {
 }
 
 .dealt:hover {
-    border: 5px solid black;
+    border: 5px solid whitesmoke;
 }
 
 .deal1{

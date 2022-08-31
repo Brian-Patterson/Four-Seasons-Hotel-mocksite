@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="nav1">nav bar</h1>
+        <h1 class="nav1"></h1>
         <h1 class="search">contact bar</h1>
-        <h1 class="nav2">nav bar part two</h1>
+        <h1 class="nav2"><%- include('partials/navOne') %></h1>
     </div>  
     <div class="showCase">
         <h1 class="randShow"><%= hotel.location %></h1>
@@ -58,7 +58,7 @@
             </div>
     </div>
     <div class="about">
-        <h3>About Hotel</h3>
+        <h3 class="hotelAbout">About Hotel</h3>
         <p class="thisHotel">This is the best hotel. A wonderful hotel. I can't think of a better
             hotel. It really is, this best. All those other hotels? Garbage. Dirt. They deserve
             to be called motels. But this hotel? Incredbile experience. I would go here everytime. 
