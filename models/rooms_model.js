@@ -11,6 +11,7 @@ const rooms = [
         user: "",
         userArrival: "",
         userDeparture: "",
+        imageAddress: "",
     },
     {
         roomNumber: 102,
@@ -21,6 +22,7 @@ const rooms = [
         user: "",
         userArrival: "",
         userDeparture: "",
+        imageAddress: "",
     },
     {
         roomNumber: 103,
@@ -31,6 +33,7 @@ const rooms = [
         user: "",
         userArrival: "",
         userDeparture: "",
+        imageAddress: "",
     },
 ];
 
