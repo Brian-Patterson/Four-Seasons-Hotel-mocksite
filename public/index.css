@@ -1,11 +1,12 @@
 body {
-    background-color: #fcfbfc;
+    background-color: #212020;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
     margin: auto;
     width: 100vw;
     height: 100vh;
+    color: whitesmoke
 }
 
 .header {
@@ -16,6 +17,13 @@ body {
     grid-template-rows: repeat(auto-fill, 1fr);
     position: fixed;
     background-color: rgba(252, 251, 252);
+    color: black;
+}
+
+.reserve {
+    grid-column: 6;
+    grid-row: 1;
+    text-align: center;
 }
 
 .keyPhoto {
@@ -38,18 +46,62 @@ body {
     text-align: center;
 }
 
-.page {
-    text-align: center
+.showpages {
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+}
+
+.showImg {
+    width: 700px;
+    grid-column: 3/ span 3;
+    grid-row: 1; 
+}
+
+.left {
+    transform: translate(-675px) scale(0.5);
+    transition: linear;
+}
+
+.right {
+    transform: translate(675px) scale(0.5);
+    transition: linear;
+}
+
+.center {
+    transform: translate(0px) scale(1);
+    transition: linear;
 }
 
 .last {
     grid-column: 1; 
     grid-row: 6; 
+    margin: 5px;
+    font-size: 40px;
+    justify-self: right;
+
 }
 
 .next {
     grid-column: 7;
     grid-row: 6; 
+    margin: 5px;
+    font-size: 40px;
 }
 
+.leftSide {
+    grid-column: 3;
+    grid-row: 7;
+}
 
+.rightSide {
+    grid-column: 5;
+    grid-row: 7;
+}
+
+.foot {
+    grid-column: 1/span 7;
+    grid-row: 8;
+    border: 1px solid black;
+    margin-top: 25px;
+}
