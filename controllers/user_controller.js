@@ -10,14 +10,33 @@ router.use(express.json());
 const db = require("../models");
 
 
-// show route - http://localhost:XXXX/products/0
-// GET request for one product template
-router.get("/", (req, res) => {
-  res.render("accounts.ejs");
-
-    try{
-
+  // index - http://localhost:XXXX/products
+  // POST request for all products from products DB
+  router.get("/", async (req, res) => {
   
+    try{
+  
+      const allUsers = await db.User.find()
+      const context = { users: allUsers };
+      // console.log(allUsers)
+      res.render("accounts.ejs", context);
+  
+  } catch(err){
+      // throw new Error(err)
+      console.log(err)
+      res.redirect('/404')
+  }  
+  });
+
+
+  // show route - http://localhost:XXXX/products/0
+// GET request for one product template
+router.get("/:userName", (req, res) => {
+  
+  try{
+    const userName = req.params.userName;
+    context = {userName: userName}
+    res.render("accountsShow.ejs", context);
   }catch(err){
       // throw new Error(err)
       console.log(err)
@@ -59,11 +78,12 @@ router.post("/", async (req, res) => {
   }
 });
 
-  
+
+
   
   // index - http://localhost:XXXX/products
   // POST request for all products from products DB
-  router.get("/accounts", async (req, res) => {
+  router.get("/", async (req, res) => {
   
     try{
   
@@ -80,22 +100,23 @@ router.post("/", async (req, res) => {
   });
   
 
-//   // destroy - http://localhost:XXXX/products/<productId>
-// // DELETE request for removing one product from products DB
-// router.delete("/:accountId", async (req, res) => {
-//   try{
+  // destroy - http://localhost:XXXX/products/<productId>
+// DELETE request for removing one product from products DB
+router.delete("/:userName", async (req, res) => {
+  try{
+    // const userValue = req.params.username
+    console.log(req.params.userName)
+    const foundUser = await db.User.findOne({username: req.params.userName});
+    console.log(foundUser)
+    await db.User.findByIdAndDelete(foundUser._id);
+    return res.redirect("/users");
 
-//     const foundUser = await db.User.findByIdAndDelete(req.params.productIndex)
-//     console.log(foundUser)
-//     return res.redirect(“/accounts”);
-
-// }catch(err){
-//     // throw new Error(err)
-//     console.log(err)
-//     res.redirect('/404')
-// }
-// });
-
+  }catch(err){
+    // throw new Error(err)
+    console.log(err)
+    res.redirect('/404')
+}
+});
 
 
 

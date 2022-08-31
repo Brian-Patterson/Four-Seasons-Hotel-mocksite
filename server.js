@@ -42,5 +42,11 @@ app.get('/', async (req, res) => {
   }
 })
 
+
+// 404 Wildcard Route
+app.get('*', (req,res)=>{
+    res.render('404')
+})
+
 // SERVER
 app.listen(PORT, () => console.log('starting server at port:', PORT))

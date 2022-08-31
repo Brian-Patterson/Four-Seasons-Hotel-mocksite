@@ -13,46 +13,48 @@
         <h1 class="nav1">nav bar</h1>
         <h1 class="search">contact bar</h1>
         <h1 class="nav2">nav bar part two</h1>
-    </div>
+    </div>  
     <div class="showCase">
         <h1 class="randShow"><%= hotel.location %></h1>
             <div class="showpages">
-                <a class="show1 page" href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>"> <h2> room one </h2> </a>
-                <a class="show2 page" href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>"> <h2> room two </h2> </a>
-                <a class="show3 page" href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>"> <h2> room three </h2> </a>
-                <div class="roomOneDetails">
-                    <div class="beds">
-                        <h3> BEDS</h3>
-                        <p>One King</p>
+                <a class="roomOne"href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>"> 
+                    <div class="roomOneDetails show1 page" >
+                        <div class="beds">
+                            <h3> BEDS</h3>
+                            <p>One King</p>
+                        </div>
+                        <div class="views">
+                            <h3>VIEWS</h3>
+                            <p>resort views</p>
+                        </div>
                     </div>
-                    <div class="views">
-                        <h3>VIEWS</h3>
-                        <p>resort views</p>
+                </a>
+
+                <a class="roomTwo" href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>">
+                    <div class="roomTwoDetails show2 page">
+                        <div class="beds">
+                            <h3> BEDS</h3>
+                            <p>Two King</p>
+                        </div>
+                        <div class="views">
+                            <h3>VIEWS</h3>
+                            <p>resort views</p>
+                        </div>
                     </div>
-                    <hr>
-                </div>
-                <div class="roomTwoDetails">
-                    <div class="beds">
-                        <h3> BEDS</h3>
-                        <p>Two King</p>
+                </a>
+                
+                <a class="roomThree" href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>">
+                    <div class="roomThreeDetails show3 page">
+                        <div class="beds">
+                            <h3> BEDS</h3>
+                            <p>Three King</p>
+                        </div>
+                        <div class="views">
+                            <h3>VIEWS</h3>
+                            <p>resort views</p>
+                        </div>
                     </div>
-                    <div class="views">
-                        <h3>VIEWS</h3>
-                        <p>resort views</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="roomThreeDetails">
-                    <div class="beds">
-                        <h3> BEDS</h3>
-                        <p>Three King</p>
-                    </div>
-                    <div class="views">
-                        <h3>VIEWS</h3>
-                        <p>resort views</p>
-                        <hr>
-                    </div>
-                </div>
+                </a>
             </div>
     </div>
     <div class="about">
