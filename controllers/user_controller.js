@@ -27,10 +27,9 @@ router.get("/", (req, res) => {
 
 
 
-  router.get("/accountSubmission", (req, res) => {
-    
+  router.get("/accounts/accountSubmission", async (req, res) => {
       try{
-
+      
         res.render("newAccount.ejs");
     }catch(err){
         // throw new Error(err)
@@ -38,6 +37,8 @@ router.get("/", (req, res) => {
         res.redirect('/404')
     }
     });
+
+    
 
 
   // create route - http://localhost:XXXX/products/
