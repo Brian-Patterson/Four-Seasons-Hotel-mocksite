@@ -12,14 +12,11 @@ const db = require("../models");
 
 // show route - http://localhost:XXXX/products/0
 // GET request for one product template
-router.get("/:productIndex", async (req, res) => {
-
+router.get("/", (req, res) => {
+  res.render("accounts.ejs");
 
     try{
-  
-      const foundUser = await db.User.findById(req.params.productIndex)
-      // let product = products[req.params.productIndex];
-      res.render("show.ejs", { product: foundUser, id: foundUser._id });
+
   
   }catch(err){
       // throw new Error(err)
@@ -30,16 +27,29 @@ router.get("/:productIndex", async (req, res) => {
 
 
 
+  router.get("/accountSubmission", (req, res) => {
+    
+      try{
+
+        res.render("newAccount.ejs");
+    }catch(err){
+        // throw new Error(err)
+        console.log(err)
+        res.redirect('/404')
+    }
+    });
+
+
   // create route - http://localhost:XXXX/products/
 // POST request for adding new product to products DB
-router.post("/accounts", async (req, res) => {
+router.post("/", async (req, res) => {
   const userAccount = req.body;
   try {
     const newUserAccount = await db.User.create(userAccount);
 
     console.log(newUserAccount, "this is the userAccount");
 
-    res.redirect("/accounts");
+    res.redirect("/users");
 
   } catch (err) {
     console.log(err)
@@ -68,5 +78,24 @@ router.post("/accounts", async (req, res) => {
   }  
   });
   
+
+//   // destroy - http://localhost:XXXX/products/<productId>
+// // DELETE request for removing one product from products DB
+// router.delete("/:accountId", async (req, res) => {
+//   try{
+
+//     const foundUser = await db.User.findByIdAndDelete(req.params.productIndex)
+//     console.log(foundUser)
+//     return res.redirect(“/accounts”);
+
+// }catch(err){
+//     // throw new Error(err)
+//     console.log(err)
+//     res.redirect('/404')
+// }
+// });
+
+
+
 
   module.exports = router;
