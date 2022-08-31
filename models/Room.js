@@ -9,6 +9,7 @@ const roomSchema = new mongoose.Schema({
     hotel: {type: mongoose.Types.ObjectId, ref: "Hotel"},
     userArrival: {type: String},
     userDeparture: {type: String},
+    imageAddress: {type: String},
 }, {timestamps: true,
 })
 
