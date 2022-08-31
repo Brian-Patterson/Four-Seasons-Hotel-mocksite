@@ -20,6 +20,12 @@ body {
     color: black;
 }
 
+.reserve {
+    grid-column: 6;
+    grid-row: 1;
+    text-align: center;
+}
+
 .keyPhoto {
     grid-column: 1/span 7;
     grid-row: 4;
@@ -83,4 +89,19 @@ body {
     font-size: 40px;
 }
 
+.leftSide {
+    grid-column: 3;
+    grid-row: 7;
+}
 
+.rightSide {
+    grid-column: 5;
+    grid-row: 7;
+}
+
+.foot {
+    grid-column: 1/span 7;
+    grid-row: 8;
+    border: 1px solid black;
+    margin-top: 25px;
+}
