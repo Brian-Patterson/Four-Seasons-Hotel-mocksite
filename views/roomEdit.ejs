@@ -1,41 +1,59 @@
 <!-- VV edit form VV -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/edit.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="nav1">nav bar</h1>
+        <h1 class="search">contact bar</h1>
+        <h1 class="nav2">nav bar part two</h1>
+    </div>
 
-<div>
-    <form action="/rooms/<%=hotel._id%>/<%=room._id%>?_method=PUT" method="POST">
-        <label for="username">Username</label>
-        <div>
+<div class="inputData">
+    <form class="form" action="/rooms/<%=hotel._id%>/<%=room._id%>?_method=PUT" method="POST">
+      <div class="input">
+          <label for="username">Username</label>
           <input id="username"
             class="input"
             type="text"
             name="user"
+            placeholder="Desired Username"
             value="<%= room.user %>"
           />
         </div>
       
-      <div>
+      <div class="DOA">
         <label for="arrival">Date of Arrival</label>
           <input id="arrival"
             class="input"
             type="text"
             name="userArrival"
+            placeholder="Arrival Date"
             value="<%= room.userArrival %>"
           />
       </div>
       
-      <div>
+      <div class="DOD">
         <label for="departure">Date of Departure</label>
           <input id="departure"
             class="input"
             type="text"
             name="userDeparture"
+            placeholder="Departure Date"
             value="<%= room.userDeparture %>"
           />
       </div>
       
-          <div>
+          <div class="submit">
        <input type="submit" value="Book Reservation">
           </div>
-      </form>
+    </form>
 </div>
-
+</body>
 <!-- ^^ edit form ^^ -->

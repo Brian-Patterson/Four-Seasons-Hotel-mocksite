@@ -1,12 +1,11 @@
 body {
-    background-color: #212020;
+    background-color: #fcfbfc;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
     margin: auto;
     width: 100vw;
     height: 100vh;
-    color: whitesmoke
 }
 
 .header {
@@ -15,93 +14,165 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
-    position: fixed;
-    background-color: rgba(252, 251, 252);
-    color: black;
+    background-image: url(https://images.stockfreeimages.com/2836/sfixl/28369526.jpg);
+    animation-duration: 5s;
+    animation-name: background;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 6s;
 }
 
-.reserve {
-    grid-column: 6;
-    grid-row: 1;
-    text-align: center;
+@keyframes background {
+    from {
+        background-image: url(https://images.stockfreeimages.com/2836/sfixl/28369526.jpg);
+    }
+    to {
+        background-image: url(https://images.stockfreeimages.com/2237/sfixl/22371432.jpg);
+    }
 }
 
-.keyPhoto {
-    grid-column: 1/span 7;
-    grid-row: 4;
-    width: 100vw;
+.nav1 {
+    grid-column: 7;
 }
 
-.about {
-    grid-column: 2/span 5;
-    grid-row: 5;
+.nav2 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.search {
+    grid-column: 1;
+    grid-row: 3;
 }
 
 .showCase {
-    grid-column: 2/span 5;
-    grid-row: 6;
+    grid-column: 1/span 7;
+    grid-row: 4;
 }
 
 .randShow {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* grid-column: 1, span 1;     */
 }
 
 .showpages {
-    display: grid; 
-    grid-template-columns: repeat(7, 1fr);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 20px;
+    transition: 0.5s linear;
+    margin: 20px;
 }
 
-.showImg {
-    width: 700px;
-    grid-column: 3/ span 3;
+.page{
+    transition: 0.25s linear;
+}
+
+.page:hover {
+    border: 5px solid black;
+}
+
+.show1 {
+    grid-column: 4/span 2;
     grid-row: 1; 
+    border: 1px solid black;
+    background-image: url(https://images.stockfreeimages.com/3658/sfixl/36582790.jpg);
+    height: 300px;
 }
 
-.left {
-    transform: translate(-675px) scale(0.5);
-    transition: linear;
+.show2 {
+    grid-column: 4/span 2;
+    grid-row: 2; 
+    border: 1px solid black;
+    background-image: url(https://images.stockfreeimages.com/2237/sfixl/22371432.jpg);
+    height: 300px;
 }
 
-.right {
-    transform: translate(675px) scale(0.5);
-    transition: linear;
+.show3 {
+    grid-column: 4/span 2;
+    grid-row: 3; 
+    border: 1px solid black;
+    background-image: url(https://images.stockfreeimages.com/2836/sfixl/28369526.jpg);
+    height: 300px;
 }
 
-.center {
-    transform: translate(0px) scale(1);
-    transition: linear;
+.roomOneDetails {
+    grid-column: 2/span 2;
+    grid-row: 1;
+    align-self: end;
 }
 
-.last {
-    grid-column: 1; 
-    grid-row: 6; 
+.roomTwoDetails {
+    grid-column: 2/span 2;
+    grid-row: 2;
+    align-self: end;
+}
+
+.roomThreeDetails {
+    grid-column: 2/span 2;
+    grid-row: 3;
+    align-self: end;
+}
+
+.about {
     margin: 5px;
-    font-size: 40px;
-    justify-self: right;
-
+    padding: 5px;
+    grid-column: 1/span 7;
+    grid-row: 8;
+    text-align: center;
 }
 
-.next {
-    grid-column: 7;
-    grid-row: 6; 
+.thisHotel {
+    background-color: rgb(210, 210, 214);
+    text-align: center;
+    padding: 80px;
+    font-size: 20px;
+}
+
+.deals {
+    grid-column: 1/span 3;
+    grid-row: 9;
     margin: 5px;
-    font-size: 40px;
 }
 
-.leftSide {
-    grid-column: 3;
-    grid-row: 7;
+.dealt{
+    transition: 0.25s linear;
+    height: 200px;
 }
 
-.rightSide {
-    grid-column: 5;
-    grid-row: 7;
+.dealt:hover {
+    border: 5px solid black;
+}
+
+.deal1{
+    border: 1px solid black;
+    grid-column: 1;
+}
+
+.deal2 {
+    border: 1px solid black;
+}
+
+.feature {
+    grid-column: 4/span 4;
+    grid-row: 9/span 2;
+    border: 1px solid black;
+    height: 400px;
+    margin: 5px;
+}
+
+.reviews {
+    grid-column: 2/span 5;
+    grid-row: 11; 
+    border: 1px solid black;
+    margin: 5px;
+    padding: 30px;
 }
 
 .foot {
     grid-column: 1/span 7;
-    grid-row: 8;
+    grid-row: 12;
     border: 1px solid black;
     margin-top: 25px;
 }
