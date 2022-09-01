@@ -1,0 +1,18 @@
+body {
+    background-color: #212020;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    color: whitesmoke;
+}
+
+.header {
+    grid-column: 1/span 7;
+    grid-row: 1;
+    background-size: 100vw;
+    color: black;
+    background-color: whitesmoke;
+}
