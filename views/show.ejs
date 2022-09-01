@@ -10,10 +10,9 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="nav1"><a href="/">Home</a></h1>
-        <h1 class="search">contact bar</h1>
-        <h1 class="nav2">nav bar part two</h1>
-        <a href="/rooms/<%=hotel._id%>/<%=room._id%>/edit"><h1 class="reserve">Book Room</h1></a>
+        <h1 class="navHotel"> <%= hotel.location %> </h1>
+        <a class="navHome" href="/"><h1> Home </h1></a>
+        <a class="reserve" href="/rooms/<%=hotel._id%>/<%=room._id%>/edit"><h1> Book Room </h1></a>
     </div>
     <img class="keyPhoto" src="https://images.stockfreeimages.com/1720/sfixl/17209494.jpg" alt="Nautical Room">
     <div class="about">
