@@ -32,11 +32,12 @@ const db = require("../models");
 
   // show route - http://localhost:XXXX/products/0
 // GET request for one product template
-router.get("/:userName", (req, res) => {
+router.get("/:userName", async (req, res) => {
   
   try{
     const userName = req.params.userName;
-    context = {userName: userName}
+    const thisUser = await db.User.findOne({username: userName})
+    context = {thisUser: thisUser}
     res.render("accountsShow.ejs", context);
   }catch(err){
       // throw new Error(err)
