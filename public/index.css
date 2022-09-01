@@ -40,16 +40,48 @@ body {
 }
 
 .nav2 {
-    grid-column: 2/span 4;
+    grid-column: 1/span 7;
     grid-row: 5;
     align-self: end;
-    display: inline;
+    color: #212020;
 }
 
-.search {
+#navRoomOne {
+    padding: 8px;
+    border-right: 1px solid #212020;
+    color: #212020;
+}
+
+#navRoomTwo {
+    padding: 8px;
+    border-right: 1px solid #212020;
+    color: #212020;
+}
+
+#navRoomThree {
+    padding: 8px;
+    color: #212020;
+}
+
+#navHome {
+    padding: 8px;
+    border-right: 1px solid #212020;
+    color: #212020;
+}
+
+#navHotel {
+    padding: 8px;
     grid-column: 1;
     grid-row: 5;
-    align-self: end;
+    color: #212020;
+}
+
+.navBarOne {
+    transition: 0.25s linear;
+}
+
+.navBarOne:hover {
+    text-decoration: underline;
 }
 
 .showCase {
@@ -136,6 +168,11 @@ body {
     grid-column: 2/span 2;
     grid-row: 3;
     align-self: end;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .about {

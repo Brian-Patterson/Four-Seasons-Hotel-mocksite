@@ -73,6 +73,14 @@ body {
 
 .page{
     transition: 0.25s linear;
+    text-align: center;
+    text-justify: center;
+    padding-top: 150px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 .page:hover {
@@ -82,8 +90,9 @@ body {
 .show1 {
     grid-column: 1; 
     border: 1px solid black;
-    background-image: url(https://images.stockfreeimages.com/3658/sfixl/36582790.jpg);
+    background-image: url(https://images.stockfreeimages.com/1961/sfixl/19612006.jpg);
     height: 200px;
+    background-position: 85% 90%;
 }
 
 .show2 {
