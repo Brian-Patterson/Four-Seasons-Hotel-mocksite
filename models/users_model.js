@@ -1,4 +1,4 @@
-//push rooms to db using dbTest.js
+//push users to db using dbTest.js
 const users = [
     {
         username: "Brian",
