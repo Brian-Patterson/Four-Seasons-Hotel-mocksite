@@ -1,13 +1,37 @@
-<p>hello brian</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/accounts.css">
+    <script src="app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="nav1"></h1>
+        <h1 class="search">contact bar</h1>
+    </div>
 
-<% for(let i=0;i<users.length;i++) { %>
-<a href="/users/<%= users[i].username %> "><%= users[i].username %></a>
-<% } %>
+    <a class="button buttonHover" href="/users/accounts/accountsubmission"> Create New Account </a>
+
+    <% for(let i=0; i<users.length; i++) { %>
+        <a class="userLink" href="/users/<%= users[i].username %> "><h2 class="userName"><%= users[i].username %></h2></a>
+    <% } %>
+
+    <footer class="foot">
+        <h3 class="foot">ma insta, ma twitt, ma contact info</h3>
+    </footer>
+</body>
 
 
-create account - redirect to new account form 
+
+
+
+<!-- create account - redirect to new account form 
 
 view account - input box to send to show page with maybe the object id. 
                 (on this  page we will have the delete account)
-                we can use find(username="")
+                we can use find(username="") -->
 
