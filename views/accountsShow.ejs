@@ -14,17 +14,19 @@
         <h1 class="search">contact bar</h1>
     </div>
     <div class="userInfo">
-        <h1 class="username">Username</h1>
-        <h3 class="email">E-Mail</h3>
-        <h3 class="number">Phonenumber</h3>
+        <h1><%= thisUser.username %></h1>
+        <h3><%= thisUser.email %></h1>
+        <h3><%= thisUser.phone %></h1>
     </div>
 
 
 
 <div>
+
+
     <p class="control">
-        <form action="/users/<%= userName %>?_method=DELETE" method="POST">
-                <input class="button is-danger" type="submit" value=“Check-Out”>                    
+        <form action="/users/<%= thisUser.username %>?_method=DELETE" method="POST">
+                <input class="button is-danger" type="submit" value=“Check-Out”/>                    
         </form>
     </p>
 </div>
