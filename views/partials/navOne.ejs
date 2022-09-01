@@ -1,6 +1,7 @@
 <nav>
-    <a href="/">Home</a>
-    <a href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>">Room One</a>
-    <a href="/rooms/<%=hotel._id%>/<%= allRooms[1]._id %>">Room Two</a>
-    <a href="/rooms/<%=hotel._id%>/<%= allRooms[2]._id %>">Room Three</a>
+    <p id="navHotel"><%= hotel.location %></p>
+    <a class="navBarOne" id="navHome" href="/">Home</a>
+    <a class="navBarOne"id=navRoomOne href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>">Room One</a>
+    <a class="navBarOne" id=navRoomTwo href="/rooms/<%=hotel._id%>/<%= allRooms[1]._id %>">Room Two</a>
+    <a class="navBarOne" id=navRoomThree href="/rooms/<%=hotel._id%>/<%= allRooms[2]._id %>">Room Three</a>
 </nav>
