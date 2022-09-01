@@ -1,4 +1,4 @@
-//push rooms to db using dbTest.js
+//push hotels to db using dbTest.js
 const hotels = [
     {
         location: "San-Juan",
