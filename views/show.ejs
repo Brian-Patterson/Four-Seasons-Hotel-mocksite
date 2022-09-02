@@ -15,7 +15,7 @@
         <a href="/users"><h1 class="reserve">Accounts</h1></a>
         <a class="reserve" href="/rooms/<%=hotel._id%>/<%=room._id%>/edit"><h1> Book Room </h1></a>
     </div>
-    <img class="keyPhoto" src="https://images.stockfreeimages.com/1720/sfixl/17209494.jpg" alt="Nautical Room">
+    <img class="keyPhoto" src="<%= room.imageAddress %>" alt="Nautical Room">
     <div class="about">
         <h3>About Hotel California</h3>
         <hr>
@@ -60,7 +60,7 @@
     <div class="rightSide">
         <div class="occupancy">
             <h3>OCCUPANCY</h3>
-            <p>2 adults, 2 children</p>
+            <p>x adults, x children</p>
             <hr>
         </div>
         <div class="bathroom">
@@ -70,7 +70,7 @@
         </div>
         <div class="unique features">
             <h3>UNIQUE FEATURES</h3>
-            <p>patio furniture on balcony</p>
+            <p><%= room.keyFeatures %></p>
             <hr>
         </div>
     </div>
