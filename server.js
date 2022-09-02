@@ -8,7 +8,7 @@ const roomController = require('./controllers/room_controller')
 
 // app configuration
 const app = express()
-// const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4000
 
 
 // MIDDLEWARE
