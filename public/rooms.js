@@ -40,14 +40,14 @@ next.addEventListener("click", () => {
 last.addEventListener("click", () => {
     console.log(i);
     arr[i].classList.remove("center");
-    arr[i].classList.add("right");
+    arr[i].classList.add("toRightFromCenter");
     i--;
     if(i === -1){
         i = arr.length-1;
         arr[i].classList.remove("left");
-        arr[i].classList.add("center");
+        arr[i].classList.add("toCenter");
         arr[i-1].classList.remove("right");
-        arr[i-1].classList.add("left");
+        arr[i-1].classList.add("fromOffToLeft");
     } else {
         arr[i].classList.remove("left");
         arr[i].classList.add("center");
