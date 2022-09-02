@@ -42,7 +42,6 @@ app.get('/', async (req, res) => {
   }
 })
 
-
 // 404 Wildcard Route
 app.get('*', (req,res)=>{
     res.render('404')
