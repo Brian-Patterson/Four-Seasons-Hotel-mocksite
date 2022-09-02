@@ -13,8 +13,29 @@ body {
     grid-column: 1/span 7;
     grid-row: 1;
     background-size: 100vw;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
     color: black;
     background-color: whitesmoke;
+}
+
+.accountsNav {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 8px;
+    border-right: 1px solid #212020;
+}
+
+.navHome {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 8px;
+    text-align: center;
+}
+
+.nav:hover {
+    text-decoration: underline;
 }
 
 a {
@@ -61,7 +82,7 @@ a {
 
 .foot {
     grid-column: 1/span 7;
-    grid-row: 6;
+    grid-row: 12;
     border: 1px solid black;
     margin-top: 25px;
 }

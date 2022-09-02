@@ -10,11 +10,13 @@
 </head>
 <body>
     <div class="header">
-        <a class="homeNav" href="/"><h1 class="homeNav">Home</h1></a>
-        <h1 class="search">contact bar</h1>
+        <a class="homeNav nav" href="/"><h1>Home</h1></a>
+        <a class="navAccounts nav" href="/users"><h1>Accounts</h1></a>
+        <h1 class="search"><%= thisUser.username %></h1>
+
     </div>
     <div class="userInfo">
-        <h1><%= thisUser.username %></h1>
+        <h1>Contact Information</h1>
         <hr>
         <h3><%= thisUser.email %></h1>
         <h3><%= thisUser.phone %></h1>

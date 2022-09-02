@@ -20,6 +20,34 @@ body {
     color: black;
 }
 
+.nav1 {
+    grid-column: 1;
+    padding: 8px;
+    border-right: 1px solid #212020; 
+    text-align: center;
+}
+
+.homeNav {
+    grid-column: 2;
+    padding: 8px;
+    text-align: center;
+}
+
+.accountsNav {
+    grid-column: 3;
+    padding: 8px;
+    text-align: center;
+}
+
+.nav:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .inputData {
     grid-column: 3;
     grid-row: 2;
