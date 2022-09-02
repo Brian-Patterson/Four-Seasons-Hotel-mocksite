@@ -9,9 +9,7 @@ router.use(express.json());
 // MODEL IMPORT
 const db = require("../models");
 
-router.get('/confirmation', (req, res) => {
-    res.render('confirmation.ejs')
-})
+
 
 router.get("/:objectId", async (req, res) => {
     try{
@@ -59,9 +57,11 @@ router.get("/:objectId", async (req, res) => {
 
     try{
       const updatedRoomData = req.body;
+      const hotelId = req.params.hotelId;
+      const roomId = req.params.roomId;
     // const updatedUser = req.body.user;
       await db.Room.findByIdAndUpdate(req.params.roomId, updatedRoomData, {new:true})
-      res.redirect(`/rooms/confirmation`);
+      res.redirect(`/rooms/${hotelId}/${roomId}/confirmation`);
       console.log("ROOM", req.body)
     }catch(err){
       console.log(err)
@@ -71,6 +71,13 @@ router.get("/:objectId", async (req, res) => {
     
   });
 
+
+  router.get('/:hotelId/:roomId/confirmation', async (req, res) => {
+        const hotel = await db.Hotel.findById(req.params.hotelId)
+        const room = await db.Room.findById(req.params.roomId)
+        const context = {hotel: hotel, room: room}
+    res.render('confirmation.ejs', context)
+})
 
 //   Put route
 

@@ -7,8 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="header">
+        <h1 class="navHotel"> <%= hotel.location %> </h1>
+        <a class="navHome" href="/"><h1> Home </h1></a>
+        <a href="/users"><h1 class="reserve">Accounts</h1></a>
+        <a class="reserve" href="/rooms/<%=hotel._id%>/<%=room._id%>/edit"><h1> Book Room </h1></a>
+    </div>
+</div>
+<img class="backgroundImage" src="https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1334&q=80" alt="Nautical Room">
     <h1> Thank you for booking a reservation!</h1>
     <p>You will recieve a confirmation email shortly!</p>
     <p>If you have not created an account, then click here -> <a href="/users/accounts/accountSubmission">Create an account</a></p>
+</div>
 </body>
 </html>
+
+
