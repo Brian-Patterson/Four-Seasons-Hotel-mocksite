@@ -137,7 +137,7 @@ body {
     grid-column: 4/span 2;
     grid-row: 1; 
     border: 1px solid black;
-    background-image: url(https://images.stockfreeimages.com/3658/sfixl/36582790.jpg);
+    /* background-image: url(https://images.stockfreeimages.com/3658/sfixl/36582790.jpg); */
     background-size: 75%;
     background-repeat: no-repeat;
     background-position: right;

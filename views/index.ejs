@@ -20,15 +20,20 @@
     <div class="showCase">
         <h1 class="randShow"><%= hotel.location %></h1>
             <div class="showpages">
-                <a class="roomOne"href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>"> 
+                <a class="roomOne"href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>">
                     <div class="roomOneDetails show1 page" >
+                        <img src="<%= allRooms[0].imageAddress%>"> 
                         <div class="beds">
                             <h3> BEDS</h3>
-                            <p>One King</p>
+                            <p><%= allRooms[0].bedCount %></p>
                         </div>
                         <div class="views">
                             <h3>VIEWS</h3>
                             <p>resort views</p>
+                        </div>
+                        <div class="price">
+                            <h3>Price</h3>
+                            <p><%= allRooms[0].price %></p>
                         </div>
                     </div>
                 </a>
@@ -37,11 +42,15 @@
                     <div class="roomTwoDetails show2 page">
                         <div class="beds">
                             <h3> BEDS</h3>
-                            <p>Two King</p>
+                            <p><%= allRooms[1].bedCount %></p>
                         </div>
                         <div class="views">
                             <h3>VIEWS</h3>
                             <p>resort views</p>
+                        </div>
+                        <div class="price">
+                            <h3>Price</h3>
+                            <p><%= allRooms[1].price %></p>
                         </div>
                     </div>
                 </a>
@@ -50,11 +59,15 @@
                     <div class="roomThreeDetails show3 page">
                         <div class="beds">
                             <h3> BEDS</h3>
-                            <p>Three King</p>
+                            <p><%= allRooms[2].bedCount %></p>
                         </div>
                         <div class="views">
                             <h3>VIEWS</h3>
                             <p>resort views</p>
+                        </div>
+                        <div class="price">
+                            <h3>Price</h3>
+                            <p><%= allRooms[2].price %></p>
                         </div>
                     </div>
                 </a>

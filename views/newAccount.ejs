@@ -1,50 +1,50 @@
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/newAccountsShow.css">
-    <script src="app.js" defer></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/newAccountsShow.css">
+  <script src="app.js" defer></script>
+  <title>Document</title>
 </head>
 <body>
-    <div class="header">
-        <h1 class="nav1"></h1>
-        <h1 class="search">Create Account</h1>
-    </div>
-    <form class="form" action="/users/" method="POST">
-        <label class="inputLabel" for="username">Username</label>
+  <div class="header">
+      <h1 class="nav1"></h1>
+      <h1 class="search">Create Account</h1>
+  </div>
+  <form class="form" action="/users/" method="POST">
+      <label class="inputLabel" for="username">Username</label>
+      
+        <input id="username"
+          class="input"
+          type="text"
+          name="username"
+          placeholder="username"
+        />
+      
+    
+    
+      <label class="emailLabel" for="email">Email</label>
+        <input id="email"
+          class="input"
+          type="text"
+          name="email"
+          placeholder=email"
+        />
+    
+    
+    
+      <label class="phoneLabel" for="phone">Phone</label>
+        <input id="phone"
+          class="input"
+          type="text"
+          name="phone"
+          placeholder=phone"
+        />
+    
+    
         
-          <input id="username"
-            class="input"
-            type="text"
-            name="username"
-            placeholder="username"
-          />
+     <input class="createButton" type="submit" value="Create Account">
         
-      
-      
-        <label class="emailLabel" for="email">Email</label>
-          <input id="email"
-            class="input"
-            type="text"
-            name="email"
-            placeholder=email"
-          />
-      
-      
-      
-        <label class="phoneLabel" for="phone">Phone</label>
-          <input id="phone"
-            class="input"
-            type="text"
-            name="phone"
-            placeholder=phone"
-          />
-      
-      
-          
-       <input class="createButton" type="submit" value="Create Account">
-          
-      </form>
+    </form>
 </body>
 <!-- ^^ edit form ^^ -->

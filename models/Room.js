@@ -10,6 +10,7 @@ const roomSchema = new mongoose.Schema({
     userArrival: {type: String},
     userDeparture: {type: String},
     imageAddress: {type: String},
+    keyFeatures: {type: String},
 }, {timestamps: true,
 })
 

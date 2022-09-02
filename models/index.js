@@ -3,3 +3,5 @@ module.exports = {
     Room: require('./Room'),
     Hotel: require('./Hotel'),
 }
+
+
