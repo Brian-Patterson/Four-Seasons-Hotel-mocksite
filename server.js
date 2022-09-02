@@ -8,7 +8,7 @@ const roomController = require('./controllers/room_controller')
 
 // app configuration
 const app = express()
-const PORT = 4000
+// const PORT = process.env.PORT || 4000
 
 
 // MIDDLEWARE
@@ -49,4 +49,4 @@ app.get('*', (req,res)=>{
 })
 
 // SERVER
-app.listen(PORT, () => console.log('starting server at port:', PORT))
+app.listen(process.env.PORT || 4000, () => console.log('starting server at port:', PORT))
