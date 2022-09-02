@@ -47,9 +47,9 @@ body {
 }
 
 .search {
-    grid-column: 1;
-    grid-row: 5;
-    align-self: end;
+    grid-column: 6;
+    grid-row: 1;
+    color: whitesmoke;
 }
 
 .showCase {

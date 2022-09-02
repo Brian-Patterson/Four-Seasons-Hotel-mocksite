@@ -17,7 +17,7 @@ body {
     background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     background-image: url(https://images.stockfreeimages.com/2836/sfixl/28369526.jpg);
     animation-duration: 5s;
     animation-name: background;
@@ -37,51 +37,71 @@ body {
 
 .nav1 {
     grid-column: 6;
+    grid-row: 1;
+    align-self: end;
 }
 
-.nav2 {
+/* .nav2 {
     grid-column: 1/span 7;
-    grid-row: 5;
+    grid-row: 3;
     align-self: end;
     color: #212020;
-}
+} */
 
 #navRoomOne {
+    grid-column: 2;
+    grid-row: 9;
     padding: 8px;
     border-right: 1px solid #212020;
-    color: #212020;
+    color: whitesmoke;
+    background-color: rgb(33, 32, 32, .50 )
 }
 
 #navRoomTwo {
+    grid-column: 3;
+    grid-row: 9;
     padding: 8px;
     border-right: 1px solid #212020;
-    color: #212020;
+    color: whitesmoke;
+    background-color: rgb(33, 32, 32, .50 )
 }
 
 #navRoomThree {
+    grid-column: 4;
+    grid-row: 9;
     padding: 8px;
-    color: #212020;
+    color: whitesmoke;
+    background-color: rgb(33, 32, 32, .50 )
 }
 
 #navHome {
+    grid-column: 1;
+    grid-row: 9;
     padding: 8px;
     border-right: 1px solid #212020;
-    color: #212020;
+    color: whitesmoke;
+    background-color: rgb(33, 32, 32, .50 )
 }
 
 #navHotel {
     padding: 8px;
     grid-column: 1;
-    grid-row: 5;
-    color: #212020;
+    grid-row: 7;
+    color: whitesmoke;
+    background-color: rgb(33, 32, 32, .35 )
 }
 
 .navBarOne {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
     transition: 0.25s linear;
+
 }
 
 .navBarOne:hover {
     text-decoration: underline;
+    background-color: rgb(33, 32, 32)
 }
 
 .showCase {

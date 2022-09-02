@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/accounts.css">
+    <link rel="stylesheet" href="/accountsShow.css">
     <script src="app.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <div class="header">
-        <h1 class="nav1"></h1>
+        <a class="homeNav" href="/"><h1 class="homeNav">Home</h1></a>
         <h1 class="search">contact bar</h1>
     </div>
     <div class="userInfo">
         <h1><%= thisUser.username %></h1>
+        <hr>
         <h3><%= thisUser.email %></h1>
         <h3><%= thisUser.phone %></h1>
     </div>
-
-
-
+    <div class="reservationInfo">
+        <h1>Current Reservation</h1>
+        <hr>
+        <h3>hotel name</h3>
+        <h3>room name</h3>
+        <h3>arrival</h3>
+        <h3>departure</h3>
+    </div>
 <div>
-
-
     <p class="control">
         <form action="/users/<%= thisUser.username %>?_method=DELETE" method="POST">
-                <input class="button is-danger" type="submit" value=“Check-Out”/>                    
+                <input class="button is-danger buttonHover" type="submit" value="Check Out of Hotel">                    
         </form>
     </p>
 </div>

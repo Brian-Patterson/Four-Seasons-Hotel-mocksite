@@ -11,7 +11,11 @@
 <body>
     <div class="header">
         <h1 class="nav1">CONTACT</h1>
-        <h1 class="nav2"> </h1>
+        <p class="indexNav id="navHotel"><%= hotel.location %></p>
+        <a class="indexNav navBarOne" id="navHome" href="/">Home</a>
+        <a class="indexNav navBarOne" id=navRoomOne href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>">Room One</a>
+        <a class="indexNav navBarOne" id=navRoomTwo href="/rooms/<%=hotel._id%>/<%= allRooms[1]._id %>">Room Two</a>
+        <a class="indexNav navBarOne" id=navRoomThree href="/rooms/<%=hotel._id%>/<%= allRooms[2]._id %>">Room Three</a>
     </div>  
     <div class="showCase">
         <h1 class="randShow"><%= hotel.location %></h1>
