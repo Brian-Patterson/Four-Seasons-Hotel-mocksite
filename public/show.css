@@ -22,10 +22,24 @@ body {
 .navHotel {
     grid-column: 1/span 2;
     padding: 8px;
+    text-align: center;
+    border-right: 1px solid whitesmoke;
 }
 
 .navHome {
+    grid-column: 3;
     padding: 8px;
+    text-align: center;
+}
+
+.navAccounts {
+    grid-column: 4;
+    padding: 8px;   
+    text-align: center;
+}
+
+.nav:hover {
+    text-decoration: underline;
 }
 
 a {
@@ -34,8 +48,9 @@ a {
 }
 
 .reserve {
-    grid-column: 7/span 3;
-    grid-row: 1;
+    grid-column: 7;
+    padding: 8px;
+    text-align: center;
 }
 
 .keyPhoto {
@@ -62,6 +77,8 @@ a {
     display: grid; 
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .showImg {
@@ -70,7 +87,7 @@ a {
     grid-row: 1; 
 }
 
-.left {
+/* .left {
     transform: translate(-90%) scale(0.5);
 }
 
@@ -80,7 +97,7 @@ a {
 
 .center {
     transform: translate(0px) scale(1);
-}
+} */
 
 .last {
     grid-column: 1; 
@@ -90,7 +107,7 @@ a {
     justify-self: right;
 }
 
-.toCenter {
+/* .toCenter {
     transform: translate(0px) scale(1);
     transition-property: transform;
     transition-duration: .25s;
@@ -128,7 +145,7 @@ a {
     transition-property: transform;
     transition-duration: 1s;
     transition: linear;
-}
+} */
 
 
 

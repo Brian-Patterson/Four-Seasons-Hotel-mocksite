@@ -10,8 +10,11 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="nav1">CONTACT</h1>
+
+
+       
         <p class="indexNav" id="navHotel"><%= hotel.location %></p>
+
         <a class="indexNav navBarOne" id="navHome" href="/">Home</a>
         <a class="indexNav navBarOne" id=navRoomOne href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>">Room One</a>
         <a class="indexNav navBarOne" id=navRoomTwo href="/rooms/<%=hotel._id%>/<%= allRooms[1]._id %>">Room Two</a>
@@ -21,8 +24,7 @@
         <h1 class="randShow"><%= hotel.location %></h1>
             <div class="showpages">
                 <a class="roomOne"href="/rooms/<%=hotel._id%>/<%= allRooms[0]._id %>">
-                    <div class="roomOneDetails show1 page" >
-                        <img src="<%= allRooms[0].imageAddress%>"> 
+                    <div style="background-image: url('<%= allRooms[0].imageAddress%>')" class="roomOneDetails show1 page">
                         <div class="beds">
                             <h3> BEDS</h3>
                             <p><%= allRooms[0].bedCount %></p>
@@ -39,7 +41,7 @@
                 </a>
 
                 <a class="roomTwo" href="/rooms/<%=hotel._id%>/<%= allRooms[1]._id %>">
-                    <div class="roomTwoDetails show2 page">
+                    <div style="background-image: url('<%= allRooms[1].imageAddress%>')"class="roomTwoDetails show2 page">
                         <div class="beds">
                             <h3> BEDS</h3>
                             <p><%= allRooms[1].bedCount %></p>
@@ -56,7 +58,7 @@
                 </a>
                 
                 <a class="roomThree" href="/rooms/<%=hotel._id%>/<%= allRooms[2]._id %>">
-                    <div class="roomThreeDetails show3 page">
+                    <div style="background-image: url('<%= allRooms[2].imageAddress%>')" class="roomThreeDetails show3 page">
                         <div class="beds">
                             <h3> BEDS</h3>
                             <p><%= allRooms[2].bedCount %></p>

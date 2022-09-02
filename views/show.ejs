@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/show.css">
-    <script src="/rooms.js" defer></script>
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+    <script src="/path/to/flickity.pkgd.min.js" defer></script>
+    <!-- <script src="/rooms.js" defer></script> -->
     <title>Document</title>
 </head>
 <body>
     <div class="header">
         <h1 class="navHotel"> <%= hotel.location %> </h1>
-        <a class="navHome" href="/"><h1> Home </h1></a>
-        <a href="/users"><h1 class="reserve">Accounts</h1></a>
-        <a class="reserve" href="/rooms/<%=hotel._id%>/<%=room._id%>/edit"><h1> Book Room </h1></a>
+        <a class="navHome nav" href="/"><h1> Home </h1></a>
+        <a class="navAccounts nav" href="/users"><h1>Accounts</h1></a>
+        <a class="reserve nav" href="/rooms/<%=hotel._id%>/<%=room._id%>/edit"><h1> Book Room </h1></a>
     </div>
     <img class="keyPhoto" src="<%= room.imageAddress %>" alt="Nautical Room">
     <div class="about">
@@ -28,10 +30,10 @@
     </div>
     <div class="showCase">
         <h1 class="randShow">Photos</h1>
-            <div class="showpages">
-                <img class="bath showImg left" src="https://images.stockfreeimages.com/1720/sfixl/17209488.jpg" alt="bathroom">
-                <img class="balcony showImg center" src="https://images.stockfreeimages.com/1424/sfixl/14245968.jpg" alt="balcony">
-                <img class="kitchen showImg right" src="https://images.stockfreeimages.com/670/sfixl/6704863.jpg" alt="kitchen">
+            <div class="main-gallery js-flickity" data-flickity-options='{"wrapAround':true}'>
+                <img class="gallery-cell showImg" src="https://images.stockfreeimages.com/1720/sfixl/17209488.jpg" alt="bathroom">
+                <img class="gallery-cell showImg" src="https://images.stockfreeimages.com/1424/sfixl/14245968.jpg" alt="balcony">
+                <img class="gallery-cell" src="https://images.stockfreeimages.com/670/sfixl/6704863.jpg" alt="kitchen">
             </div>
     </div>
     <div class="last">
