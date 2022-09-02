@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 
-
 // MIDDLEWARE
 router.use(express.json());
 
@@ -10,6 +9,9 @@ router.use(express.json());
 // MODEL IMPORT
 const db = require("../models");
 
+router.get('/confirmation', (req, res) => {
+    res.render('confirmation.ejs')
+})
 
 router.get("/:objectId", async (req, res) => {
     try{
@@ -59,7 +61,7 @@ router.get("/:objectId", async (req, res) => {
       const updatedRoomData = req.body;
     // const updatedUser = req.body.user;
       await db.Room.findByIdAndUpdate(req.params.roomId, updatedRoomData, {new:true})
-      res.redirect(`/rooms/${req.params.hotelId}`);
+      res.redirect(`/rooms/confirmation`);
       console.log("ROOM", req.body)
     }catch(err){
       console.log(err)
