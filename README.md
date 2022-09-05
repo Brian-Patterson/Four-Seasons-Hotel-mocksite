@@ -3,10 +3,11 @@ Brian Patterson - Devan Babcock - Aaron Johnston
 
 ## Description
 
+We have created a hotel site that was inspired by the 4-Seasons hotel. This a site that allows you to view accommodations and amenities for the locations provided by the line of hotels. You are able to choose your location, check-in, create an account, and check-out, all from the comfort of your own computer by visiting our website.
 
 # Screen Shots
 
-Pictures below consist of the wireframe and final project of the game.
+Pictures below consist of the wireframe and final project of the hotel site.
 
 Wire-frame:
 
