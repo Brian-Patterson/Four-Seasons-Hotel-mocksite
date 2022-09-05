@@ -2,7 +2,7 @@ const photos = document.querySelector(".showpages");
 const next = document.querySelector(".next");
 const last = document.querySelector(".last"); 
 
-// const test = document.querySelector(".jsTest")
+const test = document.querySelector(".jsTest")
 
 const bath = document.querySelector(".bath")
 const balcony = document.querySelector(".balcony")
@@ -14,6 +14,7 @@ let i=0;
 let arr = [balcony, kitchen, bath];
 
 next.addEventListener("click", () => {
+    console.log(i)
     arr[i].classList.remove("center");
     arr[i].classList.add("left");
     i++;
