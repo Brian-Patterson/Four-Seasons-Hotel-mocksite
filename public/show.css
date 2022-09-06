@@ -1,5 +1,3 @@
-
-
 body {
     background-color: #212020;
     display: grid;
@@ -24,10 +22,24 @@ body {
 .navHotel {
     grid-column: 1/span 2;
     padding: 8px;
+    text-align: center;
+    border-right: 1px solid whitesmoke;
 }
 
 .navHome {
+    grid-column: 3;
     padding: 8px;
+    text-align: center;
+}
+
+.navAccounts {
+    grid-column: 4;
+    padding: 8px;   
+    text-align: center;
+}
+
+.nav:hover {
+    text-decoration: underline;
 }
 
 a {
@@ -36,8 +48,9 @@ a {
 }
 
 .reserve {
-    grid-column: 7/span 3;
-    grid-row: 1;
+    grid-column: 7;
+    padding: 8px;
+    text-align: center;
 }
 
 .keyPhoto {
